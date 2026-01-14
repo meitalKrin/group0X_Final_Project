@@ -8,8 +8,6 @@ def receive_messages(sock):
     while True: # Message Receiving loop
         try:
             data = sock.recv(4096) #breaking down the data
-            if not data:
-                break
             print("\n" + data.decode("utf-8").strip()) # Printing it onto console
         except:
             break
