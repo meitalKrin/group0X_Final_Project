@@ -1,0 +1,6 @@
+timestamp;message;dst_app;src_app;app_protocol;msg_id
+0.015;GET /index.html;web_server;client_browser;HTTP;1
+0.022;HTTP/1.1 200 OK;client_browser;web_server;HTTP;2
+0.045;GET /images/logo.png;web_server;client_browser;HTTP;3
+0.051;HTTP/1.1 200 OK (PNG Data);client_browser;web_server;HTTP;4
+0.068;POST /login_attempt;web_server;client_browser;HTTP;5
