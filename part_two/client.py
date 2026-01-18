@@ -12,13 +12,13 @@ def receive_messages(sock):
         except:
             break
 
-async def main ():
+def main ():
     username = input("Choose username: ") 
 
     with socket.create_connection((HOST, PORT)) as sock: #creating a new connection
         threading.Thread(target=receive_messages, args=(sock,), daemon=True).start() # Setting the thread for receiving messages
 
-        await sock.sendall(f"Hello {username}\n".encode("utf-8")) # sending register command
+        sock.sendall(f"Hello {username}\n".encode("utf-8")) # sending register command
 
         print("Commands:")
         print("  MSG <message>")
